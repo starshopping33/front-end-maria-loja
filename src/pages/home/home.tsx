@@ -3,35 +3,35 @@ import { apiController } from "../../controller/api.controller"
 import { useNavigate } from "react-router-dom"
 export const Home= ()=>{
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     
-    // const validateUser = async (token:String)=>{
+    const validateUser = async (token:String)=>{
 
-    //     try{
-    //         const res = await apiController.get("/usuarios/retrieve", {
-    //          headers:{
-    //             Authorization: `Bearer ${token}`
-    //         }    
-    //         })
-    //         if(res.data){
-    //             localStorage.setItem("user",JSON.stringify(res.data))
-    //             }
-    //         } catch(error:any){
-    //             localStorage.removeItem("token")
-    //             localStorage.removeItem("user")
-    //              navigate("/login")
-    //         }
+        try{
+            const res = await apiController.get("/usuarios/retrieve", {
+             headers:{
+                Authorization: `Bearer ${token}`
+            }    
+            })
+            if(res.data){
+                localStorage.setItem("user",JSON.stringify(res.data))
+                }
+            } catch(error:any){
+                localStorage.removeItem("token")
+                localStorage.removeItem("user")
+                 navigate("/login")
+            }
 
-    //     }
-    //     useEffect(()=>{
-    //         const token = localStorage.getItem("token")
-    //         if(!token){
-    //             navigate("/login")
-    //         }
-    //         else{
-    //             validateUser(token)
-    //         }
-    //     },[])
+        }
+        useEffect(()=>{
+            const token = localStorage.getItem("token")
+            if(!token){
+                navigate("/login")
+            }
+            else{
+                validateUser(token)
+            }
+        },[])
 
             return<>
             

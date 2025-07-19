@@ -4,9 +4,10 @@ import { apiController } from "../../controller/api.controller"
 import {toast} from "react-toastify"
 import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
-import { createLoginSchema, type iCreateLogin } from "../../schemas/Login.schemas.ts"
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Input } from "../../components/input/input.tsx"
+import { createLoginSchema, type iCreateLogin } from "../../schemas/login.schemas.ts"
 
 
 export const Login=()=>{
@@ -48,10 +49,10 @@ export const Login=()=>{
             <Input errorMsg={errors.email&&errors.email.message} 
             label="E-mail" type="text" placeholder="escreva seu e-mail" register={register("email")}/>
            
-            <Input errorMsg={errors.password&&errors.password.message} 
+            <Input errorMsg={errors.password&&errors.password.message}  
                 label="Senha" type="password" placeholder="****" register={register("password")}
             />
-            <button type="submit">Login</button>
+            <button type="submit" className={style.button}>Login</button>
         </form>
     </main>
     </>
