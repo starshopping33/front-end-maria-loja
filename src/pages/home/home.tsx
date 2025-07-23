@@ -1,11 +1,13 @@
 import { useEffect } from "react"
 import { apiController } from "../../controller/api.controller"
 import { useNavigate } from "react-router-dom"
+import Style from "./style.module.css"
 export const Home= ()=>{
 
     const navigate = useNavigate()
     
     const validateUser = async (token:String)=>{
+        
 
         try{
             const res = await apiController.get("/usuarios/retrieve", {
@@ -37,11 +39,12 @@ export const Home= ()=>{
             
             
             <main>
-                <section>
+                <section className={Style.section}>
 
-                    <h1>Seu Resumo</h1>
-                    <div>
-
+                    
+                    <div className={Style.div}>
+                    <h1>Confeitaria dona Maria</h1>
+                    <p>Gerencia da confeitaria</p>
                     </div>
                 </section>
             </main>
