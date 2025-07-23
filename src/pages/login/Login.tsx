@@ -54,7 +54,7 @@ export const Login=()=>{
                 label="Senha" type="password" placeholder="****" register={register("password")}
             />
 
-           </fieldset>
+           
             <button type="submit" className={style.button}>Login</button>
         </form>
     </main>
