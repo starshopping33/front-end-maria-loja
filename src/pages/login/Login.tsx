@@ -49,10 +49,10 @@ export const Login=()=>{
             <Input errorMsg={errors.email&&errors.email.message} 
             label="E-mail" type="text" placeholder="escreva seu e-mail" register={register("email")}/>
            
-            <Input errorMsg={errors.password&&errors.password.message} 
+            <Input errorMsg={errors.password&&errors.password.message}  
                 label="Senha" type="password" placeholder="****" register={register("password")}
             />
-            <button type="submit">Login</button>
+            <button type="submit" className={style.button}>Login</button>
         </form>
     </main>
     </>
