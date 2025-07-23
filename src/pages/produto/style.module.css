@@ -1,0 +1,29 @@
+.body {
+ background: pink;
+}
+
+.div{
+    display: grid;
+    gap:  15px;
+}
+
+.name{
+    background: white;
+    border-style: dashed;
+    border-color: brown;
+    border-width: 3px;
+}
+
+.price_sell {
+    background: white;
+    border-style: dashed;
+    border-color: brown;
+    border-width: 3px;
+}
+
+.custo {
+    background: white;
+    border-style: dashed;
+    border-color: brown;
+    border-width: 3px;
+}

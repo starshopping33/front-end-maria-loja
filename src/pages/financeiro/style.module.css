@@ -1,0 +1,47 @@
+.body {
+ background: pink;
+}
+
+.div{
+    display: grid;
+    gap:  15px;
+}
+
+.div_visores {
+    display: flex;
+    gap: 30px;
+}
+
+.despesaVisor{
+    background: white;
+    border-style: dashed;
+    border-color: brown;
+    border-width: 3px;
+}
+
+.lucroVisor{
+    background: white;
+    border-style: dashed;
+    border-color: brown;
+    border-width: 3px;
+}
+
+.div{
+    background: white;
+    display: grid;
+    gap: 15px;
+}
+
+.Descrição{
+    background: white;
+    border-style: dashed;
+    border-color: brown;
+    border-width: 3px;
+}
+
+.Valor{
+    background: white;
+    border-style: dashed;
+    border-color: brown;
+    border-width: 3px;
+}
