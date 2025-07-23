@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { apiController } from "../../controller/api.controller"
 import { useNavigate } from "react-router-dom"
-import style from "/"
+import Style from "./style.module.css"
 export const Home= ()=>{
 
     const navigate = useNavigate()
@@ -42,7 +42,7 @@ export const Home= ()=>{
 
                     <h1>Seu Resumo</h1>
                     <div>
-confeitaria da dona maria
+                    confeitaria da dona maria
                     </div>
                 </section>
             </main>
