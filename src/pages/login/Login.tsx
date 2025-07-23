@@ -4,7 +4,7 @@ import { apiController } from "../../controller/api.controller"
 import {toast} from "react-toastify"
 import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
-import { createLoginSchema, type iCreateLogin } from "../../schemas/Login.schemas.ts"
+import { createLoginSchema, type iCreateLogin } from "../../schemas/login.schemas.ts"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Input } from "../../components/input/input.tsx"
 
