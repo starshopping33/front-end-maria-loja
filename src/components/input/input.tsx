@@ -6,9 +6,10 @@ interface InputProps {
     type:"text"|"password",
     placeholder:string
     errorMsg?:string
-    register:{}
+    register:{},
+    className?:string
 }
-export const Input = ({label,type,placeholder,errorMsg,register}:InputProps)=>{
+export const Input = ({label,type,placeholder,errorMsg,register,className}:InputProps)=>{
     const [newType,setNewType] = useState("password")
     const changeType = ()=>{
         if(newType === "password"){
@@ -22,11 +23,11 @@ export const Input = ({label,type,placeholder,errorMsg,register}:InputProps)=>{
         {
             type === "password"?
             <>
-            <input type={newType} {...register} placeholder={placeholder} id={label} />
+            <input className={className} type={newType} {...register} placeholder={placeholder} id={label} />
             <Iconify onClick={changeType} className={style.icon} icon="ri:eye-line"/>
             </>
         :
-        <input {...register} placeholder={placeholder} type={type} id={label}/>
+        <input className={className}  {...register} placeholder={placeholder} type={type} id={label}/>
          }
          {errorMsg ? 
                 <span className={style.error}>{errorMsg}</span>
