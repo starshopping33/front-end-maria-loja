@@ -41,7 +41,7 @@ return <>
         <p className={style.quantidade_visor}>0</p>
         <p className={style.p_visor}>Lucro cadastrado (Mensal)</p>
         </div>
-        
+       
 </div>
 
             {/* Visor acaba aqui */}

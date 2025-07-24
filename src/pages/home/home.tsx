@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { apiController } from "../../controller/api.controller"
 import { useNavigate } from "react-router-dom"
-import style from "/"
+import style from "./style.module.css"
 export const Home= ()=>{
 
     const navigate = useNavigate()
@@ -38,7 +38,7 @@ export const Home= ()=>{
             
             
             <main>
-                <section className={Style.section}>
+                <section className={style.section}>
 
                     <h1>Seu Resumo</h1>
                     <div>

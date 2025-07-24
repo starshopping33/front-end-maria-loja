@@ -27,3 +27,23 @@
     border-color: brown;
     border-width: 3px;
 }
+
+.produtoVisor {
+    width: 70vh;
+    background: white;
+    border-style: dashed;
+    border-color: brown;
+    border-width: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1_Gestão_De_Produtos {
+    color: white;
+}
+
+.add {
+    
+    background: pink;
+}
