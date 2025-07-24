@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { apiController } from "../../controller/api.controller"
 import { useNavigate } from "react-router-dom"
 import Style from "./style.module.css"
-import Style from "./style.module.css"
+
 export const Home= ()=>{
 
     const navigate = useNavigate()
