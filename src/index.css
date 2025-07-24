@@ -7,3 +7,24 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
+
+.button{
+      background-color: #efeaec;
+    color: hotpink;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(230, 76, 153);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
