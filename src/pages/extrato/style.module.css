@@ -1,0 +1,172 @@
+/* style.module.css */
+
+/* Estilos gerais */
+.body {
+  background: pink;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #5d4037;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #5d4037;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Div visor */
+.div_visor {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+  align-items: center;
+  background: white;
+  border-style: dashed;
+  border-color: brown;
+  border-width: 3px;
+  padding: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.div_visor::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 3px dashed brown;
+  pointer-events: none;
+}
+
+.h1_visor {
+  display: grid;
+  background: white;
+  border-style: dashed;
+  border-color: brown;
+  border-width: 3px;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  width: 150px;
+  justify-self: start;
+}
+
+.div_extrato {
+  display: grid;
+  gap: 12px;
+  padding: 15px;
+}
+
+.p_extrato {
+  margin: 0;
+  padding: 8px 12px;
+  background: rgba(165, 42, 42, 0.05);
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.p_extrato:last-child {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #2e7d32;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 2px dashed brown;
+}
+
+/* Div resumo */
+.div_resumo {
+  display: grid;
+  gap: 15px;
+  background: white;
+  border-style: dashed;
+  border-color: brown;
+  border-width: 3px;
+  padding: 25px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.div_resumo::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 3px dashed brown;
+  pointer-events: none;
+}
+
+.h2_resumo {
+  display: grid;
+  background: white;
+  border-style: dashed;
+  border-color: brown;
+  border-width: 3px;
+  padding: 10px;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0 auto 15px;
+  width: 200px;
+}
+
+.p_resumo {
+  margin: 0;
+  padding: 8px 15px;
+  background: rgba(165, 42, 42, 0.05);
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.p_resumo:last-child {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #2e7d32;
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 2px dashed brown;
+}
+
+/* Estilos para o ícone */
+.iconify {
+  font-size: 3rem;
+  color: brown;
+  justify-self: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .div_visor {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .h1_visor {
+    justify-self: center;
+  }
+  
+  .div_visor > svg {
+    margin: 0 auto;
+  }
+  
+  .div_extrato, .div_resumo {
+    padding: 15px;
+  }
+}
