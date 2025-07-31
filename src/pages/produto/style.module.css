@@ -1,29 +1,196 @@
+  .bodyDiv {
+  background: pink;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .body {
- background: pink;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.div{
-    display: grid;
-    gap:  15px;
+.produtoVisor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 3px dashed brown;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-.name{
-    background: white;
-    border-style: dashed;
-    border-color: brown;
-    border-width: 3px;
+.h1_visor {
+  font-size: 2rem;
+  color: brown;
+  margin: 10px 0;
 }
 
-.price_sell {
-    background: white;
-    border-style: dashed;
-    border-color: brown;
-    border-width: 3px;
+.quantidade_visor {
+  font-size: 3rem;
+  font-weight: bold;
+  color: brown;
+  margin: 5px 0;
 }
 
-.custo {
-    background: white;
-    border-style: dashed;
-    border-color: brown;
-    border-width: 3px;
+.p_visor {
+  font-size: 1.2rem;
+  color: #5d4037;
+  margin: 5px 0;
+}
+
+.h1_Gestão_De_Produtos {
+  background: white;
+  border: 3px dashed brown;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: brown;
+  margin: 20px 0;
+}
+
+.div {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.name, .price_sell, .custo {
+  background: white;
+  border: 3px dashed brown;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.name section, .price_sell section, .custo section {
+  font-weight: bold;
+  color: brown;
+  margin-bottom: 10px;
+}
+
+.input_Nome_Cupcake,
+.input_Preço_Venda,
+.input_Custo_R {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.input_Nome_Cupcake:focus,
+.input_Preço_Venda:focus,
+.input_Custo_R:focus {
+  outline: none;
+  border-color: brown;
+}
+
+.button {
+  background: white;
+  border: 3px dashed brown;
+  padding: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  color: brown;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: brown;
+  color: white;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+.listaProdutos {
+  margin-top: 30px;
+}
+
+.listaProdutos h2 {
+  color: brown;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.listaProdutos ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.listaProdutos li {
+  background: white;
+  border: 2px dashed brown;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listaProdutos li strong {
+  color: brown;
+}
+
+
+.erro {
+  color: red;
+  background: white;
+  padding: 10px;
+  border: 2px dashed brown;
+  margin: 20px 0;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.loading {
+  text-align: center;
+  color: brown;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .div {
+    grid-template-columns: 1fr;
+  }
+  
+  .listaProdutos li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .produtoVisor {
+    padding: 15px;
+  }
+  
+  .h1_visor {
+    font-size: 1.5rem;
+  }
+  
+  .quantidade_visor {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .div {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
