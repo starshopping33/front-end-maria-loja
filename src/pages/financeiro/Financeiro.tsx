@@ -4,6 +4,12 @@ import { Iconify } from "../../components/iconify/Iconify";
 //import { useNavigate } from "react-router-dom"
 //import { apiController } from "../../controller/api.controller"
 
+interface FinanceiroDespesa {
+    id: string;
+    descricao: string;
+    valor: string;
+}
+
 export const Financeiro = () => {
     // Simulando produtos cadastrados (apenas para cálculo)
     const [produtos] = useState<{ id: string; preco: string; custo: string }[]>([
@@ -11,10 +17,11 @@ export const Financeiro = () => {
         { id: "2", preco: "7.00", custo: "2.80" }
     ]);
 
-    const [despesas, setDespesas] = useState<{ id: string; descricao: string; valor: string }[]>([]);
+    const [despesas, setDespesas] = useState<FinanceiroDespesa[]>([]);
     const [descricao, setDescricao] = useState("");
     const [valor, setValor] = useState("");
 
+    
     // Totais de vendas e custos dos produtos
     const [totalVendas, setTotalVendas] = useState(0);
     const [totalCustoProducao, setTotalCustoProducao] = useState(0);

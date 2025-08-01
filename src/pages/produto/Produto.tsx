@@ -3,9 +3,15 @@ import style from "./style.module.css";
 import { Iconify } from "../../components/iconify/Iconify";
 //import { apiController } from "../../controller/api.controller"
 
+interface Produto {
+    id: string;
+    name: string;
+    preco: string;
+    custo: string;
+}
 
 export const Produto = () => {
-    const [produtos, setProdutos] = useState<{ id: string; name: string; preco: string; custo: string }[]>([]);
+    const [produtos, setProdutos] = useState<Produto[]>([]);
     const [nome, setNome] = useState("");
     const [preco, setPreco] = useState("");
     const [custo, setCusto] = useState("");

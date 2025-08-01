@@ -2,7 +2,13 @@ import { useState, useEffect } from "react";
 import style from "./style.module.css";
 import { Iconify } from "../../components/iconify/Iconify";
 
-export const Extrato = () => {
+interface ExtratoDespesa {
+    id: string;
+    descricao: string;
+    valor: string;
+}
+
+export const ExtratoDespesa = () => {
     // Simulando dados vindos do Financeiro
     const [totalVendas, setTotalVendas] = useState(0); // valor total vendido no mês
     const [totalCustoProducao, setTotalCustoProducao] = useState(0); // custo de produção do mês
