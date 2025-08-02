@@ -60,7 +60,7 @@ export const Produto = () => {
                         </fieldset>
                     </div>
                     <div>
-                        <fieldset className={style.price_sell}>
+                        <fieldset className={style.name}>
                             <section>Preço de Venda (R$)</section>
                             <input
                                 type="text"
@@ -72,18 +72,18 @@ export const Produto = () => {
                         </fieldset>
                     </div>
                     <div>
-                        <fieldset className={style.custo}>
+                        <fieldset className={style.name}>
                             <section>Custo (R$)</section>
-                            <input
+                            <input 
                                 type="text"
-                                className={style.input_Custo_R$}
+                                className={style.input_Custo_RS}
                                 placeholder="Ex: 3.20"
                                 value={custo}
                                 onChange={e => setCusto(e.target.value)}
                             />
                         </fieldset>
                     </div>
-                    <button type="submit">Adicionar Produto</button>
+                    <button className={style.button} type="submit">Adicionar Produto</button>
                 </form>
                 {/* Log dos produtos */}
                 <ul>

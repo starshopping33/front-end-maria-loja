@@ -71,7 +71,7 @@ export const Financeiro = () => {
                 {/* Gestão financeira */}
                 <h1 className={style.h1_Gestão_Financeira}>Gestão Financeira</h1>
                 <form className={style.div} onSubmit={handleAddDespesa}>
-                    <div>
+                    <div className={style.divPost}>
                         <div className={style.Descrição}>
                             <fieldset>
                                 <section>Descrição</section>
@@ -96,7 +96,7 @@ export const Financeiro = () => {
                             </fieldset>
                         </div>
                     </div>
-                    <button type="submit">Adicionar Despesa</button>
+                    <button className={style.button} type="submit">Adicionar Despesa</button>
                 </form>
                 {/* Log das despesas */}
                 <ul>
