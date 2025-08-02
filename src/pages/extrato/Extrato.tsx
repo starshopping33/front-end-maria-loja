@@ -37,8 +37,12 @@ export const Extrato = () => {
 
     return (
         <main>
-            <h1>Extrato</h1>
+            <div className={style.title}>
+             <h1>Extrato</h1>
             <p>Visualize o extrato mensal da sua confeitaria</p>
+
+            </div>
+           
             <div className={style.div_visor}>
                 <Iconify icon={"ri--money-cny-box-fill"} />
                 <h1 className={style.h1_visor}>Extrato</h1>

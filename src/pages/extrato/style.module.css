@@ -29,8 +29,9 @@ p {
 
 /* Div visor */
 .div_visor {
-  display: grid;
-  grid-template-columns: auto 1fr;
+ display: flex;
+ align-items: center;
+ flex-direction: column;
   gap: 15px;
   align-items: center;
   background: white;
@@ -90,9 +91,17 @@ p {
   border-top: 2px dashed brown;
 }
 
+.title{
+
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* Div resumo */
 .div_resumo {
-  display: grid;
+display: flex;
+ align-items: center;
+ flex-direction: column;
   gap: 15px;
   background: white;
   border-style: dashed;

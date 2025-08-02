@@ -1,6 +1,4 @@
-.body {
- background: pink;
-}
+
 
 .div{
     display: grid;
@@ -10,6 +8,7 @@
 .div_visores {
     display: flex;
     gap: 30px;
+    justify-content: center;
 }
 
 .despesaVisor{
@@ -17,19 +16,33 @@
     border-style: dashed;
     border-color: brown;
     border-width: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vh;
 }
+.divPost{
+display: flex;
+    flex-direction: column;
+    gap: 24px;
 
+}
 .lucroVisor{
     background: white;
     border-style: dashed;
     border-color: brown;
     border-width: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vh;
 }
 
 .div{
-    background: white;
-    display: grid;
+   display: flex;
     gap: 15px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Descrição{
@@ -45,3 +58,23 @@
     border-color: brown;
     border-width: 3px;
 }
+
+.button{
+
+      background-color: #efeaec;
+    color: hotpink;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.h1_Gestão_Financeira{
+    display: flex
+;
+    justify-content: center;
+
+        }

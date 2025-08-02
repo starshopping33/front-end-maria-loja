@@ -1,5 +1,5 @@
-  .bodyDiv {
-  background: pink;
+.bodyDiv {
+  background: linear-gradient(135deg, #fff1eb 0%, #ace0f9 100%);
   min-height: 100vh;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,10 +8,11 @@
 .body {
   max-width: 1200px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 }
 
 .produtoVisor {
@@ -20,110 +21,135 @@
   align-items: center;
   justify-content: center;
   background: white;
-  border: 3px dashed brown;
-  padding: 20px;
+  border: 2px solid #ffb6c1;
+  padding: 25px;
   margin-bottom: 30px;
   text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.produtoVisor:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .h1_visor {
-  font-size: 2rem;
-  color: brown;
+  font-size: 2.2rem;
+  color: #d23c67;
   margin: 10px 0;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .quantidade_visor {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
-  color: brown;
+  color: #ff6b88;
   margin: 5px 0;
+  background: linear-gradient(to right, #ff6b88, #ff8e53);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .p_visor {
-  font-size: 1.2rem;
-  color: #5d4037;
+  font-size: 1.3rem;
+  color: #8d6e63;
   margin: 5px 0;
 }
 
 .h1_Gestão_De_Produtos {
   background: white;
-  border: 3px dashed brown;
-  padding: 15px;
+  border: 2px solid #ffb6c1;
+  padding: 18px;
   text-align: center;
-  font-size: 1.5rem;
-  color: brown;
-  margin: 20px 0;
+  font-size: 1.7rem;
+  color: #d23c67;
+  margin: 25px 0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 .div {
-  display: grid;
-  gap: 15px;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
 }
 
-.name, .price_sell, .custo {
-  background: white;
-  border: 3px dashed brown;
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed #ffb6c1;
+  width: 100%;
+  max-width: 300px;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
 }
 
-.name section, .price_sell section, .custo section {
-  font-weight: bold;
-  color: brown;
-  margin-bottom: 10px;
+.name:hover {
+  border-style: solid;
+  background: white;
 }
 
 .input_Nome_Cupcake,
 .input_Preço_Venda,
-.input_Custo_R {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.input_Custo_RS {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
   font-size: 1rem;
+  margin: 8px 0;
+  transition: all 0.3s ease;
 }
 
 .input_Nome_Cupcake:focus,
 .input_Preço_Venda:focus,
-.input_Custo_R:focus {
+.input_Custo_RS:focus {
   outline: none;
-  border-color: brown;
+  border-color: #ff6b88;
+  box-shadow: 0 0 0 2px rgba(255, 107, 136, 0.2);
 }
 
 .button {
-  background: white;
-  border: 3px dashed brown;
-  padding: 15px;
-  font-size: 1.1rem;
+  background: linear-gradient(to right, #ff6b88, #ff8e53);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 100%;
+  width: 90%;
   max-width: 300px;
-  margin: 0 auto;
-  color: brown;
-  font-weight: bold;
+  margin-top: 15px;
+  box-shadow: 0 3px 10px rgba(255, 107, 136, 0.3);
 }
 
 .button:hover {
-  background: brown;
-  color: white;
+  background: linear-gradient(to right, #ff5777, #ff7b3a);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 107, 136, 0.4);
 }
 
-.button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
+.button:active {
+  transform: translateY(1px);
 }
-
 
 .listaProdutos {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .listaProdutos h2 {
-  color: brown;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  color: #d23c67;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -131,66 +157,64 @@
   list-style: none;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 15px;
 }
 
 .listaProdutos li {
   background: white;
-  border: 2px dashed brown;
-  padding: 15px;
-  border-radius: 5px;
+  border: 2px solid #ffcdd2;
+  padding: 18px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
+}
+
+.listaProdutos li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border-color: #ff6b88;
 }
 
 .listaProdutos li strong {
-  color: brown;
+  color: #ff6b88;
+  font-weight: 600;
 }
 
-
 .erro {
-  color: red;
-  background: white;
-  padding: 10px;
-  border: 2px dashed brown;
-  margin: 20px 0;
+  color: #d32f2f;
+  background: #ffebee;
+  padding: 15px;
+  border: 2px solid #ef9a9a;
+  margin: 25px 0;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .loading {
   text-align: center;
-  color: brown;
-  font-size: 1.2rem;
+  color: #ff6b88;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
-  .div {
-    grid-template-columns: 1fr;
+  .body {
+    padding: 20px;
+  }
+  
+  .h1_visor {
+    font-size: 1.8rem;
+  }
+  
+  .quantidade_visor {
+    font-size: 2.8rem;
   }
   
   .listaProdutos li {
     flex-direction: column;
     align-items: flex-start;
-    gap: 5px;
-  }
-  
-  .produtoVisor {
-    padding: 15px;
-  }
-  
-  .h1_visor {
-    font-size: 1.5rem;
-  }
-  
-  .quantidade_visor {
-    font-size: 2.5rem;
-  }
-}
-
-@media (min-width: 769px) {
-  .div {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
   }
 }
