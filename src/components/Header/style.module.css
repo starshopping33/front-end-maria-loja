@@ -1,0 +1,68 @@
+.header {
+    padding: 24px;
+    background-color: #FAF9F6; /* Using a hex code */
+  color: rgb(245, 245, 245); 
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.header nav {
+    display: flex;
+    gap: 16px;
+  
+}
+.header nav a {
+    color: var(--color-secondary);
+}
+.fieldset {
+    position: relative;
+    border: none;
+}
+.fieldset input {
+        padding-left: 36px;
+}
+.icon {
+    position: absolute;
+    left: 8px;
+    top: 12px;
+}
+
+
+
+.ZZZZZ{
+    display: flex;
+    align-items: center;
+  color: #d23669;
+}
+
+.botoes{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.perfilbotao{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+ justify-content: center;
+   background: linear-gradient(to right, #ff6b88, #ff8e53);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 90%;
+  max-width: 300px;
+  margin-top: 15px;
+  box-shadow: 0 3px 10px rgba(255, 107, 136, 0.3);
+  
+
+}

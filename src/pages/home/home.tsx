@@ -1,7 +1,8 @@
 import { useEffect } from "react"
-import { apiController } from "../../controller/api.controller"
+
 import { useNavigate } from "react-router-dom"
 import Style from "./style.module.css"
+import { Header } from "../../components/Header/header"
 
 
 
@@ -36,13 +37,26 @@ import Style from "./style.module.css"
     //     }, [])
     
         return <>
+
+         <Header/>
             <main>
-                <section>
-                    <div className={Style.div}>
-                        <h1>Confeitaria dona Maria</h1>
-                        <p>Gerencia da confeitaria</p>
-                    </div>
-                </section>
+
+                <div className={Style.div}>
+                <div className={Style.cupcakeLeft}>🧁</div>
+      
+      <div className={Style.titleContainer}>
+        <h1 className={Style.title}>Confeitaria Dona Maria</h1>
+        <p className={Style.subtitle}>🔴 Gerenciamento da confeitaria 🔴</p>
+      </div>
+      
+      <div className={Style.cupcakeRight}>🧁</div>
+
+
+
+                </div>
+                  
+      
+      
             </main>
         </>
     }
