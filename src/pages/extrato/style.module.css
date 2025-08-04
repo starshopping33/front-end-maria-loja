@@ -2,10 +2,10 @@
 
 /* Estilos gerais */
 .body {
-  background: pink;
+  background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   min-height: 100vh;
 }
 
@@ -15,167 +15,225 @@ main {
   padding: 20px;
 }
 
-h1 {
-  color: #5d4037;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  text-align: center;
+   border: 3px dashed #a0522d;
+   background-color: white ;
 }
 
-p {
+.title h1 {
   color: #5d4037;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.title h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #d23c67, #ff8e53);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.title p {
+  color: #8d6e63;
+  font-size: 1.3rem;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 /* Div visor */
 .div_visor {
- display: flex;
- align-items: center;
- flex-direction: column;
-  gap: 15px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
   background: white;
-  border-style: dashed;
-  border-color: brown;
-  border-width: 3px;
-  padding: 20px;
-  margin-bottom: 30px;
+  border: 3px dashed #a0522d;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   position: relative;
+  overflow: hidden;
 }
 
 .div_visor::before {
   content: "";
   position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border: 3px dashed brown;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px dashed rgba(165, 42, 42, 0.2);
   pointer-events: none;
+  border-radius: 8px;
+}
+
+.iconify {
+  font-size: 3.5rem;
+  color: #d23c67;
+  margin-bottom: 10px;
 }
 
 .h1_visor {
-  display: grid;
   background: white;
-  border-style: dashed;
-  border-color: brown;
-  border-width: 3px;
-  padding: 10px;
-  font-size: 1.5rem;
-  text-align: center;
+  border: 3px dashed #a0522d;
+  padding: 12px 25px;
+  font-size: 1.8rem;
+  color: #5d4037;
   margin: 0;
-  width: 150px;
-  justify-self: start;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
 }
 
 .div_extrato {
   display: grid;
-  gap: 12px;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
   padding: 15px;
 }
 
 .p_extrato {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
-  padding: 8px 12px;
-  background: rgba(165, 42, 42, 0.05);
-  border-radius: 4px;
-  font-size: 1.1rem;
+  padding: 12px 20px;
+  background: rgba(255, 182, 193, 0.1);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #5d4037;
+  transition: all 0.3s ease;
+}
+
+.p_extrato:hover {
+  background: rgba(255, 182, 193, 0.2);
+  transform: translateX(5px);
 }
 
 .p_extrato:last-child {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #2e7d32;
-  margin-top: 10px;
-  padding-top: 12px;
-  border-top: 2px dashed brown;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px dashed #a0522d;
+  background: rgba(46, 125, 50, 0.05);
 }
 
-.title{
-
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 /* Div resumo */
 .div_resumo {
-display: flex;
- align-items: center;
- flex-direction: column;
-  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   background: white;
-  border-style: dashed;
-  border-color: brown;
-  border-width: 3px;
-  padding: 25px;
-  margin-top: 30px;
+  border: 3px dashed #a0522d;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   position: relative;
+  overflow: hidden;
 }
 
 .div_resumo::before {
   content: "";
   position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border: 3px dashed brown;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px dashed rgba(165, 42, 42, 0.2);
   pointer-events: none;
+  border-radius: 8px;
 }
 
 .h2_resumo {
-  display: grid;
   background: white;
-  border-style: dashed;
-  border-color: brown;
-  border-width: 3px;
-  padding: 10px;
-  font-size: 1.4rem;
-  text-align: center;
-  margin: 0 auto 15px;
-  width: 200px;
+  border: 3px dashed #a0522d;
+  padding: 12px 25px;
+  font-size: 1.8rem;
+  color: #5d4037;
+  margin: 0 0 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
 }
 
 .p_resumo {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
-  padding: 8px 15px;
-  background: rgba(165, 42, 42, 0.05);
-  border-radius: 4px;
-  font-size: 1.1rem;
+  padding: 12px 20px;
+  background: rgba(255, 182, 193, 0.1);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #5d4037;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+}
+
+.p_resumo:hover {
+  background: rgba(255, 182, 193, 0.2);
+  transform: translateX(5px);
 }
 
 .p_resumo:last-child {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #2e7d32;
   margin-top: 15px;
-  padding-top: 12px;
-  border-top: 2px dashed brown;
-}
-
-/* Estilos para o ícone */
-.iconify {
-  font-size: 3rem;
-  color: brown;
-  justify-self: center;
+  padding-top: 15px;
+  border-top: 2px dashed #a0522d;
+  background: rgba(46, 125, 50, 0.05);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .div_visor {
-    grid-template-columns: 1fr;
+  .title h1 {
+    font-size: 2.2rem;
+  }
+  
+  .title p {
+    font-size: 1.1rem;
+  }
+  
+  .div_visor, .div_resumo {
+    padding: 20px;
+  }
+  
+  .h1_visor, .h2_resumo {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+  }
+  
+  .p_extrato, .p_resumo {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+  
+  .p_extrato:last-child, .p_resumo:last-child {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .p_extrato, .p_resumo {
+    flex-direction: column;
+    gap: 5px;
     text-align: center;
-  }
-  
-  .h1_visor {
-    justify-self: center;
-  }
-  
-  .div_visor > svg {
-    margin: 0 auto;
-  }
-  
-  .div_extrato, .div_resumo {
-    padding: 15px;
   }
 }

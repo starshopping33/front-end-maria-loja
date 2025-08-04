@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./style.module.css";
 import { Iconify } from "../../components/iconify/Iconify";
-//import { apiController } from "../../controller/api.controller"
+import { Header } from "../../components/Header/header";
 
 interface Produto {
     id: string;
@@ -33,9 +33,14 @@ export const Produto = () => {
         setCusto("");
     };
 
-    return (
+    return<>
+    <Header/>
+    
+     (
         <div className={style.body}>
             <main>
+
+            
                 {/* Visor começa aqui */}
                 <div className={style.produtoVisor}>
                     <Iconify icon={"ri--cake-3-fill"} />
@@ -96,4 +101,8 @@ export const Produto = () => {
             </main>
         </div>
     );
+    
+    
+    
+    </>
 };

@@ -3,16 +3,75 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-.section{
-    background-color: #f6f3f3;
-    border-style: dashed;
-    border-color: #522a08;
-    border-width: 3px;
-    border-radius: 12px;
+    background-color: #f8f8f8;
+  border-radius: 8px;
+    border: solid 2px #000000;
     font-family: "Dancing Script", cursive;
-    width: 600px;
-    margin: 0 auto;
-    box-shadow: 0 4px 16px rgba(160, 82, 45, 0.2);
-    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #fff5f5;
+  border-bottom: 3px solid #ffb6b6;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.titleContainer {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #d23669;
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0.5rem 0 0;
+  letter-spacing: 1px;
+}
+
+.cupcakeLeft, .cupcakeRight {
+  font-size: 2.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cupcakeRight {
+  animation-delay: 0.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .cupcakeLeft, .cupcakeRight {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
 }

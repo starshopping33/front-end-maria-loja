@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import style from "./style.module.css";
 import { Iconify } from "../../components/iconify/Iconify";
+import { Header } from "../../components/Header/header";
 
 interface ExtratoDespesa {
     id: string;
@@ -41,8 +42,13 @@ export const ExtratoDespesa = () => {
         setLucroFinal(lucroBruto - despesas - impostoCalculado);
     }, [totalVendas, totalCustoProducao, despesasFixas]);
 
-    return (
+    return <>
+    <Header/>
+    (
+
+        
         <main>
+         
             <div className={style.title}>
              <h1>Extrato</h1>
             <p>Visualize o extrato mensal da sua confeitaria</p>
@@ -70,4 +76,9 @@ export const ExtratoDespesa = () => {
             </div>
         </main>
     );
+    
+    
+    </>
+    
+    
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./style.module.css";
 import { Iconify } from "../../components/iconify/Iconify";
+import { Header } from "../../components/Header/header";
 //import { useNavigate } from "react-router-dom"
 //import { apiController } from "../../controller/api.controller"
 
@@ -48,9 +49,16 @@ export const Financeiro = () => {
         setValor("");
     };
 
-    return (
+    return <>
+    <Header/>
+    
+    (  
+
+        
         <div className={style.body}>
+
             <main>
+
                 {/* Visor começa aqui */}
                 <div className={style.div_visores}>
                     <div className={style.despesaVisor}>
@@ -109,4 +117,11 @@ export const Financeiro = () => {
             </main>
         </div>
     );
+    
+    
+    
+    
+    
+    
+    </>
 };
