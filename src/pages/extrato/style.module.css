@@ -21,8 +21,9 @@ main {
   align-items: center;
   margin-bottom: 40px;
   text-align: center;
-   border: 3px dashed #a0522d;
+   border: 3px dashed #ffb6c1;
    background-color: white ;
+   border-radius: 8px;
 }
 
 .title h1 {
@@ -58,7 +59,7 @@ main {
   align-items: center;
   gap: 20px;
   background: white;
-  border: 3px dashed #a0522d;
+  border: 3px dashed #ffb6c1;
   padding: 30px;
   margin-bottom: 40px;
   border-radius: 15px;
@@ -74,7 +75,7 @@ main {
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 2px dashed rgba(165, 42, 42, 0.2);
+  border: 2px dashed #ffb6c1;
   pointer-events: none;
   border-radius: 8px;
 }
@@ -87,7 +88,7 @@ main {
 
 .h1_visor {
   background: white;
-  border: 3px dashed #a0522d;
+  border: 3px dashed #ffb6c1;
   padding: 12px 25px;
   font-size: 1.8rem;
   color: #5d4037;
@@ -128,7 +129,7 @@ main {
   color: #2e7d32;
   margin-top: 15px;
   padding-top: 15px;
-  border-top: 2px dashed #a0522d;
+  border-top: 2px dashed #ffb6c1;
   background: rgba(46, 125, 50, 0.05);
 }
 
@@ -139,7 +140,7 @@ main {
   align-items: center;
   gap: 20px;
   background: white;
-  border: 3px dashed #a0522d;
+  border: 3px dashed #ffb6c1;
   padding: 30px;
   margin-top: 40px;
   border-radius: 15px;
@@ -162,7 +163,7 @@ main {
 
 .h2_resumo {
   background: white;
-  border: 3px dashed #a0522d;
+  border: 3px dashed #ffb6c1;
   padding: 12px 25px;
   font-size: 1.8rem;
   color: #5d4037;
@@ -197,7 +198,7 @@ main {
   color: #2e7d32;
   margin-top: 15px;
   padding-top: 15px;
-  border-top: 2px dashed #a0522d;
+  border-top: 2px dashed #ffb6c1;
   background: rgba(46, 125, 50, 0.05);
 }
 

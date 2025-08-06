@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import style from "./style.module.css";
 import { Iconify } from "../../components/iconify/Iconify";
 import { Header } from "../../components/Header/header";
+import { toast } from "react-toastify";
 
 
 export const Produto = () => {
-    const [produtos, setProdutos] = useState<{ id: string; name: string; preco: string; custo: string }[]>([]);
+    const [produtos, setProdutos] = useState<{ id: string; name: string; preco: string; custo: string }[]>([])
     const [nome, setNome] = useState("");
     const [preco, setPreco] = useState("");
     const [custo, setCusto] = useState("");
 
     const handleAddProduto = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!nome) return;
+        e.preventDefault()
+        if (!nome) return
         setProdutos([
             ...produtos,
             {
@@ -22,10 +23,12 @@ export const Produto = () => {
                 custo: custo
             }
         ]);
-        setNome("");
-        setPreco("");
-        setCusto("");
-    };
+        setNome("")
+        setPreco("")
+        setCusto("")
+
+        toast.success("Sucesso")
+    }
 
     return<>
     <Header/>
@@ -45,7 +48,11 @@ export const Produto = () => {
                 {/* Visor acaba aqui */}
                 {/* Gestão de produtos */}
                 <h1 className={style.h1_Gestão_De_Produtos}>Gestão de Produtos</h1>
-                <form className={style.div} onSubmit={handleAddProduto}>
+
+
+                    <div>
+
+ <form className={style.div} onSubmit={handleAddProduto}>
                     <div>
                         <fieldset className={style.name}>
                             <section>Nome do Cupcake</section>
@@ -85,18 +92,24 @@ export const Produto = () => {
                     <button className={style.button} type="submit">Adicionar Produto</button>
                 </form>
                 {/* Log dos produtos */}
-                <ul>
+                <ul className={style.ul}>
                     {produtos.map((produto) => (
-                        <li key={produto.id}>
+                        <li key={produto.id}  className={style.li}>
                             {produto.name} - Venda: R$ {produto.preco} - Custo: R$ {produto.custo}
                         </li>
                     ))}
                 </ul>
+
+                        
+                    </div>
+
+                   
             </main>
         </div>
-    );
+        
+    )
     
     
     
     </>
-};
+}
