@@ -116,7 +116,7 @@
 }
 
 /* Responsividade */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .form {
     padding: 30px 20px;
     gap: 24px;

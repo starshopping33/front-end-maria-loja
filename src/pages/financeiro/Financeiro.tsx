@@ -81,11 +81,11 @@ export const Financeiro = () => {
                 <form className={style.div} onSubmit={handleAddDespesa}>
                     <div className={style.divPost}>
                         <div className={style.Descrição}>
-                            <fieldset>
+                            <fieldset className={style.fieldset}>
                                 <section>Descrição</section>
-                                <input
+                                <input  className={style.input}
                                     type="text"
-                                    className={style.Descricao}
+                                    
                                     placeholder="Ex: Ingrediente"
                                     value={descricao}
                                     onChange={e => setDescricao(e.target.value)}
@@ -93,9 +93,9 @@ export const Financeiro = () => {
                             </fieldset>
                         </div>
                         <div className={style.Valor}>
-                            <fieldset>
+                            <fieldset  className={style.fieldset}>
                                 <section>Valor (R$)</section>
-                                <input
+                                <input className={style.input}
                                     type="text"
                                     placeholder="Ex: 250,00 R$"
                                     value={valor}
@@ -107,9 +107,9 @@ export const Financeiro = () => {
                     <button className={style.button} type="submit">Adicionar Despesa</button>
                 </form>
                 {/* Log das despesas */}
-                <ul>
+                <ul className={style.ul}>
                     {despesas.map((despesa) => (
-                        <li key={despesa.id}>
+                        <li key={despesa.id} className={style.li}>
                             {despesa.descricao} - R$ {despesa.valor}
                         </li>
                     ))}
