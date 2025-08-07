@@ -3,7 +3,7 @@ import { Home } from "../pages/home/home"
 import { Login } from "../pages/login/Login"
 import { Produto } from "../pages/produto/Produto"
 import { Financeiro } from "../pages/financeiro/Financeiro"
-import { Extrato } from "../pages/extrato/Extrato"
+import { ExtratoDespesa } from "../pages/extrato/Extrato"
 export function MainRoutes(){
 
     return <Routes>
@@ -11,7 +11,7 @@ export function MainRoutes(){
         <Route path="/" element={<Home/>}/>
         <Route path="/produto" element={<Produto/>}/>
         <Route path="/financeiro" element={<Financeiro/>}/>
-        <Route path="/extrato" element={<Extrato/>}/>
+        <Route path="/extrato" element={<ExtratoDespesa/>}/>
         <Route path="/Login" element={<Login/>}/>
     </Routes>
 }

@@ -12,6 +12,7 @@ import { createLoginSchema, type iCreateLogin } from "../../schemas/login.schema
 import { apiController } from "../../Controller/api.controller.ts"
 
 
+
 export const Login=()=>{
     const navigate = useNavigate()
     const {
@@ -29,7 +30,7 @@ export const Login=()=>{
         console.log(loginData,"loginData")
        
       try {
-         const res = await apiController.post("/login",loginData)
+         const res = await apiController.login(loginData)
             console.log(res,"res do axios")
        if(res.data.token){
             toast.success("Sucesso, login")

@@ -3,13 +3,9 @@ import style from "./style.module.css";
 import { Iconify } from "../../components/iconify/Iconify";
 import { Header } from "../../components/Header/header";
 //import { useNavigate } from "react-router-dom"
-//import { apiController } from "../../controller/api.controller"
+import {  apiController } from "../../Controller/api.controller";
+import type { ICreateDespesa } from "../../schemas/usuario.schemas";
 
-interface FinanceiroDespesa {
-    id: string;
-    descricao: string;
-    valor: string;
-}
 
 export const Financeiro = () => {
     // Simulando produtos cadastrados (apenas para cálculo)
@@ -18,7 +14,7 @@ export const Financeiro = () => {
         { id: "2", preco: "7.00", custo: "2.80" }
     ]);
 
-    const [despesas, setDespesas] = useState<FinanceiroDespesa[]>([]);
+    const [despesas,setDespesas] = useState<ICreateDespesa[]>([]);
     const [descricao, setDescricao] = useState("");
     const [valor, setValor] = useState("");
 
@@ -27,32 +23,43 @@ export const Financeiro = () => {
     const [totalVendas, setTotalVendas] = useState(0);
     const [totalCustoProducao, setTotalCustoProducao] = useState(0);
 
+    const getFinanceiro = async () => {
+        try {
+            const data = await apiController.getFinanceiro()
+            console.log(data)
+            setDespesas(data)
+        } catch (error) {
+            console.error("Erro ao buscar financeiro:", error)
+        }
+    };
+
     useEffect(() => {
         const vendas = produtos.reduce((acc, p) => acc + parseFloat(p.preco.replace(",", ".")) || 0, 0);
         const custos = produtos.reduce((acc, p) => acc + parseFloat(p.custo.replace(",", ".")) || 0, 0);
         setTotalVendas(vendas);
         setTotalCustoProducao(custos);
+        getFinanceiro()
     }, [produtos]);
 
-    const handleAddDespesa = (e: React.FormEvent) => {
+    const handleAddDespesa = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!descricao || !valor) return;
-        setDespesas([
-            ...despesas,
-            {
-                id: Date.now().toString(),
-                descricao: descricao,
-                valor: valor
-            }
-        ]);
+            const data = await apiController.postFinanceiro({
+                descricao,
+                valor:Number(valor)
+            })
+            console.log(data)
+       
+       
         setDescricao("");
         setValor("");
+
     };
 
     return <>
     <Header/>
     
-    (  
+     
 
         
         <div className={style.body}>
@@ -64,7 +71,7 @@ export const Financeiro = () => {
                     <div className={style.despesaVisor}>
                         <Iconify icon={"marketeq--bill-dollar"} />
                         <h1 className={style.h1_visor}>Despesas</h1>
-                        <p className={style.quantidade_visor}>{despesas.length}</p>
+                        <p className={style.quantidade_visor}>{descricao.length}</p>
                         <p className={style.p_visor}>Despesas cadastradas (Mensal)</p>
                         <p className={style.p_visor}>Custo produção: R$ {totalCustoProducao.toFixed(2)}</p>
                     </div>
@@ -109,19 +116,12 @@ export const Financeiro = () => {
                 {/* Log das despesas */}
                 <ul className={style.ul}>
                     {despesas.map((despesa) => (
-                        <li key={despesa.id} className={style.li}>
+                        <li className={style.li}>
                             {despesa.descricao} - R$ {despesa.valor}
                         </li>
                     ))}
                 </ul>
             </main>
         </div>
-    );
-    
-    
-    
-    
-    
-    
     </>
 };

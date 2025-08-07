@@ -5,6 +5,8 @@ import { Header } from "../../components/Header/header";
 import { toast } from "react-toastify";
 
 
+
+
 export const Produto = () => {
     const [produtos, setProdutos] = useState<{ id: string; name: string; preco: string; custo: string }[]>([])
     const [nome, setNome] = useState("");
@@ -14,19 +16,8 @@ export const Produto = () => {
     const handleAddProduto = (e: React.FormEvent) => {
         e.preventDefault()
         if (!nome) return
-        setProdutos([
-            ...produtos,
-            {
-                id: Date.now().toString(),
-                name: nome,
-                preco: preco,
-                custo: custo
-            }
-        ]);
-        setNome("")
-        setPreco("")
-        setCusto("")
-
+    //    const data = await apiController.postProduto
+    
         toast.success("Sucesso")
     }
 
